@@ -28,5 +28,5 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           apk update
-          apk add openjdk23 maven
-          semgrep ci --allow-local-builds
+          apk add openjdk23-jdk maven
+          semgrep ci --allow-local-builds --supply-chain
