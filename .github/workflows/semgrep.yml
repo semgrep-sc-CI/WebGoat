@@ -27,6 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
+          echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing" >>/etc/apk/repositories
           apk update
-          apk add openjdk21 maven
+          apk add openjdk23-jdk maven
           semgrep ci --allow-local-builds --supply-chain
