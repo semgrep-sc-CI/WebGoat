@@ -43,4 +43,4 @@ jobs:
 
       - name: Semgrep Security Scan
         run: |
-          semgrep ci --allow-local-builds
+          semgrep ci --allow-local-builds --debug
