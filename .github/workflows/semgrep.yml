@@ -34,6 +34,9 @@ jobs:
           java-version: '23'
           cache: 'maven' 
           check-latest: true
+
+      - name: Build
+        run: mvn -B verify
           
       - name: Semgrep Security Scan
         run: |
